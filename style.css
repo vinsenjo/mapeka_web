@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-family: sans-serif;
+   overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    background-color: white;
+    /* padding: 20px 0; */
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    height: 60px;
+    align-items: center;
+    
+}
+.navbar-logo{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    padding: 0 10px 0 0;
+}
+.navbar ul{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.9em;  
+}
+
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: aliceblue;
+}
+
+
+/* hamburger menu */
+.menu-togle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu-togle span{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 3px;
+    transform-origin: 0 0 ;
+    transition: 0.2s;
+}
+/* animasi hamburger */
+.menu-togle.active span:nth-child(1){
+    transform: translateX(2px) rotate(45deg) ;
+    
+}
+.menu-togle.active span:nth-child(3){
+    transform: translateX(-1px) translateY(1px) rotate(-45deg) ;
+}
+
+.menu-togle.active span:nth-child(2){
+    opacity: 0;
+}
+
+/* HEADER */
+.header{
+    background-image: url(./images/head.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.header_sub{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color: white;
+}
+
+#title-sub{
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+   
+}
+h1{
+    font-family: 'Bree Serif', serif;;
+    font-size: 50px;
+}
+
+/* ABOUT */
+
+.about{
+    padding: 20px 0;
+    text-align: center;
+    width: 50%;
+    transform: translateX(50%);
+}
+
+#about-logo{
+    padding-bottom: 20px;
+}
+
+.about h2{
+    padding-bottom: 20px;
+}
+
+/* Divisi */
+.divisi-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.rc , .caving , .hg{
+   border-style: dotted;
+    padding: 20px;
+    width: 300px;
+}
+
+/* responsive web */
+
+/*  tablet*/
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+      width: 50%;
+    }
+  }
+
+/* Smartphone */
+@media only screen and (max-width: 578px) {
+    
+    .navbar ul {
+    position: absolute; 
+      background-color: orangered;
+      opacity: 95%;
+      top: 60px;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(-120%);
+      transition: 0.8s;
+      width: 100%;
+      height: 50%;
+      
+    }
+    .menu-togle{
+        display: flex;
+    }
+    .navbar ul.slide-nav{
+        transform: translateX(0);
+    }
+    .navbar ul li a:hover{
+        color: aliceblue;
+
+    }
+    .navbar ul li a {
+        color: black;
+    }
+/* HEADER */
+ .header{
+
+    height: 91vh;
+    background-image: url(./images/cave.jpg);
+   
+ }
+ .header_sub{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    padding-top: 10px;
+    left: 20%;
+ }
+ /* about */
+ .about{
+    padding: 20px 0;
+    text-align: center;
+    width: 70%;
+    transform: translateX(25%);
+}
+   
+  }
