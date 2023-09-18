@@ -10,7 +10,7 @@ body{
 /* NAVBAR */
 .navbar{
     display: flex;
-    background-color: white;
+    background-color: orange;
     /* padding: 20px 0; */
     justify-content: space-between;
     font-family: 'Inter', sans-serif;
