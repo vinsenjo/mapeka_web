@@ -151,7 +151,7 @@ h1{
   }
 
 /* Smartphone */
-@media only screen and (max-width: 578px) {
+@media screen and (max-width: 578px) {
     
     .navbar ul {
     position: absolute; 
