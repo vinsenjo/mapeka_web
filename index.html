@@ -1,84 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <link rel="stylesheet" href="style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@200;300&family=Libre+Baskerville&family=Noto+Sans+Avestan&family=Sacramento&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <title>MAPEKA</title>
-</head>
-<body>
-    <!-- Navbar -->
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <img src="./images/Logo.png" height="40px" id="logo">
-                <h3>MAPEKA</h3>
-            </div>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Divisions</a></li>
-                <li><a href="">Gallery</a></li>
-            </ul>
-            <div class="menu-togle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-  <!--Header  -->
-  <section>
-    <div class="header">
-            <div class="header_sub">
-            <h1>MAPEKA</h1>
-            <p id="title-sub">Mahasiswa Pecinta Kelestarian Alam</p>
-          </div>
-    </div>
-<!-- About -->
-    <section>
-        
-    <div class="about">
-        <img src="./images/Logo.png" alt="" height="100px" id="about-logo">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-             ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-             Duis aute irure dolor in reprehenderit in voluptate velit 
-             esse cillum dolore eu fugiat nulla pariatur. 
-             Excepteur sint occaecat cupidatat non proident, 
-             sunt in culpa qui officia deserunt mollit anim id est
-            laborum
-        </p>
-    </div>
-    </section>
 
-    <hr>
-<!-- Divisi -->
-    <section>
-    <div class="divisi">
-        <h2>Divisi</h2>
-            <div class="divisi-box">
-                <div class="rc">
-                    <h4>Rock Climbing</h4>
-                </div>
-                <div class="caving">
-                   <h4>Caving</h4>
-                </div>
-                <div class="hg">
-                    <h4>Hutan Gunung</h4>
-                </div>
-            </div>
-    </div>
-
-    </section>
-</section>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-family: sans-serif;
+   overflow-x: hidden;
+  
+   /* background-color: aqua; */
+}
 
 
+/* NAVBAR */
+.navbar{
+    display: flex;
+    background-color: white;
+    /* padding: 20px 0; */
+    justify-content: space-between;
+    font-family:  'Open Sans', sans-serif;;
+    font-weight: bold;
+    height: 60px;
+    align-items: center;
+    
+}
+.navbar-logo{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    padding: 0 10px 0 0;
+}
+.navbar ul{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.9em;  
+}
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-</body>
-</html>
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: aliceblue;
+}
+
+
+/* hamburger menu */
+.menu-togle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu-togle span{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    border-radius: 3px;
+    transform-origin: 0 0 ;
+    transition: 0.2s;
+}
+/* animasi hamburger */
+.menu-togle.active span:nth-child(1){
+    transform: translateX(2px) rotate(45deg) ;
+    
+}
+.menu-togle.active span:nth-child(3){
+    transform: translateX(-1px) translateY(1px) rotate(-45deg) ;
+}
+
+.menu-togle.active span:nth-child(2){
+    opacity: 0;
+}
+
+/* HEADER */
+.header{
+    background-image: url(./images/head.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.header_sub{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color: white;
+}
+
+#title-sub{
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+   
+}
+h1{
+    font-family: 'Bree Serif', serif;;
+    font-size: 50px;
+}
+
+/* ABOUT */
+
+.about{
+    padding: 20px 0;
+    text-align: center;
+    width: 50%;
+    transform: translateX(50%);
+}
+
+#about-logo{
+    padding-bottom: 20px;
+}
+
+.about h2{
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Divisi */
+.divisi-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rc:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .caving:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+
+.hg:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.divisi h2 {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 2.5rem;
+}
+
+.rc , .caving , .hg{
+    display: flex;
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    border-radius: 5%;
+    justify-content: center;
+    
+}
+
+.rc{
+    background-image: url(./images/rc.jpg);
+    background-size: cover;
+}
+
+.caving{
+    background-image: url(./images/cave-2.jpg);
+    background-size: cover;
+
+}
+
+.hg{
+    background-image: url(./images/hg.jpg);
+    background-size: cover;
+}
+.divisi-box p{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    font-size: 2rem;
+
+}
+
+/* responsive web */
+
+/*  tablet*/
+@media only screen and (max-width: 1024px) {
+    .navbar ul {
+      width: 50%;
+    }
+
+    .header{
+        background-image: url(./images/rc.jpg);
+    }
+    .header_sub{
+       position: absolute;
+       top: 40px;
+    }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 480px){
+    
+    .navbar ul {
+    position: absolute; 
+      background-color: black;
+      opacity: 95%;
+      top: 60px;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(-120%);
+      transition: 0.8s;
+      width: 100%;
+      height: 50%;
+      
+    }
+    .menu-togle{
+        display: flex;
+    }
+    .navbar ul.slide-nav{
+        transform: translateX(0);
+    }
+    .navbar ul li a:hover{
+        color: orangered;
+    }
+    .navbar ul li a {
+        color: white;
+    }
+/* HEADER */
+ .header{
+    height: 90vh;
+    background-image: url(./images/cave.jpg);
+    justify-content: center;
+ }
+ .header_sub{
+    /* position: absolute; */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    top: 0;
+    padding-top: 10px; 
+    
+ }
+ /* about */
+ .about{
+    padding: 20px 0;
+    text-align: center;
+    width: 70%;
+    transform: translateX(25%);
+    
+}
+
+.divisi-box{
+    flex-direction: column;
+    align-items: center;
+}
+  }
